@@ -1,4 +1,4 @@
-import { NavigationContainer } from '@react-navigation/native';
+// import { NavigationContainer } from '@react-navigation/native';
 import React, {useState, useRef, useEffect} from 'react'
 import { View, Text, StyleSheet, Button, KeyboardAvoidingView, TextInput, TouchableOpacity} from 'react-native'
 import { useNavigation } from '@react-navigation/core'

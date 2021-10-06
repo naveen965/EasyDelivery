@@ -11,9 +11,18 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Login" component={Login} options={{ headerShown: false }}/>
-        <Stack.Screen name="Verification" component={Verification} options={{ headerShown: false }}/>
-        <Stack.Screen name="Home" component={Home} options={{ headerShown: false }}/>
+        <Stack.Screen 
+          name="Login" 
+          component={Login} 
+          options={{ headerShown: false }}/>
+        <Stack.Screen 
+          name="Verification" 
+          component={Verification} 
+          options={{ title: 'Verification', headerBackTitle: '', headerShown: false }}/>
+        <Stack.Screen 
+          name="Home" 
+          component={Home} 
+          options={{ title: 'Home', headerBackTitle: '', headerShown: false }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
