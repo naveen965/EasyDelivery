@@ -1,24 +1,27 @@
 import React from 'react'
-import { View, Text, TouchableOpacity, StyleSheet} from 'react-native'
+import { View, Text, TouchableOpacity, StyleSheet, Image} from 'react-native'
 import { useNavigation } from '@react-navigation/core'
 
 const Welcome = () => {
 
     const navigation = useNavigation();
 
-    const login = () => {
+    const signin = () => {
         navigation.navigate('Login')
     }
 
     return (
         <View>
-            {/* <View>
-                <Image source={require('../assets/images/welcome.jpg')} />
+            {/* <View style={{ backgroundColor: '#000000', width: 400, height: 300, alignItems: 'center' }}>
+                <Image 
+                    source={{uri: 'https://reactjs.org/logo-og.png'}}
+                    style={{width: 400, height: 400}} 
+                />
             </View> */}
             <View style={styles.viewBottom}>
-                <TouchableOpacity onPress={login}>
+                <TouchableOpacity onPress={signin}>
                     <View style={styles.buttonContinue}>
-                        <Text style={styles.textContinue}>Login</Text>
+                        <Text style={styles.textContinue}>Sign In</Text>
                     </View>
                 </TouchableOpacity>
             </View>
