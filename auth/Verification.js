@@ -120,7 +120,7 @@ const Verification = () => {
                                         style={styles.cellText}
                                         onPress={() => textInput.focus()}
                                     >
-                                        11{internalVal && internalVal.length > 0 ? internalVal[index] : ""}
+                                        {internalVal && internalVal.length > 0 ? internalVal[index] : ""}
                                     </Text>
                                 </View>
                             ))

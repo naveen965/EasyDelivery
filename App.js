@@ -12,22 +12,22 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {/* <Stack.Screen 
+        <Stack.Screen 
           name="Welcome" 
           component={Welcome} 
-          options={{ headerShown: false }}/> */}
+          options={{ headerShown: false }}/>
         <Stack.Screen 
           name="Login" 
           component={Login} 
-          options={{ headerShown: false }}/>
+          options={{ title: 'Login', headerBackTitle: '', headerShown: true }}/>
         <Stack.Screen 
           name="Verification" 
           component={Verification} 
-          options={{ title: 'Verification', headerBackTitle: '', headerShown: false }}/>
+          options={{ title: 'Verification', headerBackTitle: '', headerShown: true }}/>
         <Stack.Screen 
           name="Home" 
           component={Home} 
-          options={{ title: 'Home', headerBackTitle: '', headerShown: false }}/>
+          options={{ title: 'Home', headerBackTitle: '', headerShown: true }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

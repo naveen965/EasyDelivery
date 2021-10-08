@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, TouchableOpacity, StyleSheet, Image} from 'react-native'
+import { View, Text, TouchableOpacity, StyleSheet, Image, Button} from 'react-native'
 import { useNavigation } from '@react-navigation/core'
 
 const Welcome = () => {
@@ -11,13 +11,14 @@ const Welcome = () => {
     }
 
     return (
-        <View>
-            {/* <View style={{ backgroundColor: '#000000', width: 400, height: 300, alignItems: 'center' }}>
+        <View style={styles.container}>
+            <View style={styles.imageView}>
                 <Image 
-                    source={{uri: 'https://reactjs.org/logo-og.png'}}
-                    style={{width: 400, height: 400}} 
+                    source={require("../assets/welcom.jpg")}
+                    style={{height: 200}} 
+                    resizeMode= "contain"
                 />
-            </View> */}
+            </View>
             <View style={styles.viewBottom}>
                 <TouchableOpacity onPress={signin}>
                     <View style={styles.buttonContinue}>
@@ -25,19 +26,23 @@ const Welcome = () => {
                     </View>
                 </TouchableOpacity>
             </View>
-            
         </View>
     )
 }
 
 
 const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: 'white',
+        flexDirection: "column"
+    },
     viewBottom: {
         flex: 1,
-        justifyContent: 'flex-end',
-        marginBottom: 50,
+        backgroundColor: 'white',
         alignItems: 'center',
-        paddingTop: 600
+        justifyContent: 'flex-end',
+        paddingBottom: 100
     },
     buttonContinue: {
         width: 150,
@@ -45,11 +50,20 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#ffffff'
+        backgroundColor: '#ffffff',
+        borderColor: 'black',
+        borderWidth: 2
     },
     textContinue: {
         color: '#000000',
         alignItems: 'center'
+    },
+    imageView: {
+        flex: 3,
+        backgroundColor: 'white',
+        alignItems: 'center',
+        justifyContent: 'flex-end',
+        
     }
 })
 
