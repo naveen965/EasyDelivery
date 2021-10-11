@@ -8,7 +8,7 @@ const Verification = () => {
     let clockCall = null
     const lengthInput = 6;
     const defaultCountdown = 30;
-    const [internalVal, setInternalVal] = useState("")
+    const [internalVal, setInternalVal] = useState(123)
     const [countdown, setCountdown] = useState(defaultCountdown)
     const [enableResend, setEnableResend] = useState(false)
     const data = [
@@ -77,55 +77,13 @@ const Verification = () => {
                     <TextInput
                         ref={(input) => textInput = input}
                         onChangeText={onChangeText}
-                        style={{width: 0, height: 0}}
+                        style={styles.textInputStyle}
                         value={internalVal}
                         maxLength={lengthInput}
                         returnKeyType="done"
                         keyboardType="numeric"
                     />
-                    <View style={styles.containerInput}>
-                        {/* {
-                            Array(lengthInput).fill().map((data, index) => {
-                                <View 
-                                    key={index}
-                                    style={[
-                                        styles.cellView,
-                                        {
-                                            borderBottomColor: index === internalVal.length ? '#FB6C6A' : '#234DB7'
-                                        }
-                                    ]}
-                                >
-                                    <Text 
-                                        style={styles.cellText}
-                                        onPress={() => textInput.focus()}
-                                    >
-                                        54554{internalVal && internalVal.length > 0 ? internalVal[index] : ""}
-                                    </Text>
-                                </View>
-                            })
-                        } */}
-
-                        {
-                            data.map((item, index) => (
-                                <View 
-                                    key={index}
-                                    style={[
-                                        styles.cellView,
-                                        {
-                                            borderBottomColor: index === internalVal.length ? '#FB6C6A' : '#234DB7'
-                                        }
-                                    ]}
-                                >
-                                    <Text 
-                                        style={styles.cellText}
-                                        onPress={() => textInput.focus()}
-                                    >
-                                        {internalVal && internalVal.length > 0 ? internalVal[index] : ""}
-                                    </Text>
-                                </View>
-                            ))
-                        }  
-                    </View>
+                    
                 </View>
                 <View style={styles.bottomView}>
                     <TouchableOpacity onPress={onChangeNumber}>
@@ -153,6 +111,15 @@ const Verification = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1
+    },
+    textInputStyle: {
+        width: 200, 
+        fontSize: 21, 
+        color: 'white', 
+        backgroundColor: 'white', 
+        paddingHorizontal: 12, 
+        paddingVertical: 10, 
+        textAlign: 'center'
     },
     containerAvoiddingView: {
         flex: 1,

@@ -125,10 +125,9 @@ const Login = () => {
                 ]}>
                     <TouchableOpacity onPress={onShowHideModal}>
                         <View style={styles.openDialogView}>
-                            <Text>{codeCountry + " |"}</Text>
+                            <Text>{codeCountry + " |"}{renderModal()}</Text>
                         </View>
                     </TouchableOpacity>
-                    {renderModal()}
                     <TextInput
                         ref={(input) => textInput = input}
                         style={styles.phoneInputStyle}
