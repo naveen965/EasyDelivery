@@ -42,9 +42,9 @@ const Welcome = () => {
                     style={{height: 200}} 
                     resizeMode= "contain"
                 />
-                <View style={styles.containerTwo}>
+                {/* <View style={styles.containerTwo}>
                     <Text style={styles.paragraph}>{text}</Text>
-                </View>
+                </View> */}
             </View>
             <View style={styles.viewBottom}>
                 <TouchableOpacity onPress={signin}>
