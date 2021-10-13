@@ -38,7 +38,7 @@ const Welcome = () => {
         <View style={styles.container}>
             <View style={styles.imageView}>
                 <Image 
-                    source={require("../../assets/welcom.jpg")}
+                    source={require("../../assets/welcome.png")}
                     style={{height: 200}} 
                     resizeMode= "contain"
                 />

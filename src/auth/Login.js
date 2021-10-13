@@ -112,10 +112,10 @@ const Login = () => {
     return (
         <View style={styles.container}>
             <KeyboardAvoidingView 
-                keyboardVerticalOffset={50}
-                behavior={'padding'}
+                keyboardVerticalOffset={20}
                 style={styles.containerAvoiddingView}
             >
+                <Text style={{fontSize: 25, marginTop: 50}}>Register</Text>
                 <Text style={styles.textTitle}>{"Please input your mobile phone number"}</Text>
                 <View style={[
                     styles.containerInput,

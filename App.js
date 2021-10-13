@@ -19,15 +19,15 @@ function App() {
         <Stack.Screen 
           name="Login" 
           component={Login} 
-          options={{ title: 'Login', headerBackTitle: '', headerShown: true }}/>
+          options={{ title: 'Login', headerBackTitle: '', headerShown: false }}/>
         <Stack.Screen 
           name="Verification" 
           component={Verification} 
-          options={{ title: 'Verification', headerBackTitle: '', headerShown: true }}/>
+          options={{ title: 'Verification', headerBackTitle: '', headerShown: false }}/>
         <Stack.Screen 
           name="Home" 
           component={Home} 
-          options={{ title: 'Home', headerBackTitle: '', headerShown: true }}/>
+          options={{ title: 'Home', headerBackTitle: '', headerShown: false }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
